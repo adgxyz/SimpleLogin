@@ -29,12 +29,13 @@ def signup():
     data = request.get_json()
     # Hash the password
     password_hash = bcrypt.generate_password_hash(data['password']).decode('utf-8')
-    new_user = execute_signup(password_hash, data['email'], data['username'])
+    new_user = execute_signup(password_hash, data['email'], data['username'], data['role'])
     return jsonify({
         'message': 'User created successfully',
         'user': {
             'email': new_user['email'],
-            'username': new_user['username']
+            'username': new_user['username'],
+            'role': new_user['role']
         }
     }), 201
 
