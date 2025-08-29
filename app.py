@@ -4,12 +4,14 @@ from flask_bcrypt import Bcrypt
 from flask_jwt_extended import (
     JWTManager, create_access_token, jwt_required, get_jwt_identity
 )
+from flask_cors import CORS
 from auth import *
 from dotenv import load_dotenv
 import os
 load_dotenv()
 
 app = Flask(__name__)
+CORS(app)
 app.config['JWT_SECRET_KEY'] = os.getenv("APP_SECRET")
 app.config['JWT_SUBJECT_CLAIM'] = 'sub'
 bcrypt = Bcrypt(app)
