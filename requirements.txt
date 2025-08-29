@@ -8,13 +8,8 @@ cffi==1.17.1
 chardet==4.0.0
 click==8.2.1
 colorama==0.4.4
-command-not-found==0.3
-configobj==5.0.6
-constantly==15.1.0
 cryptography==3.4.8
 dbus-python==1.2.18
-distro==1.7.0
-distro-info==1.1+ubuntu0.2
 Flask==3.1.1
 Flask-Bcrypt==1.0.1
 Flask-JWT-Extended==4.7.1
@@ -53,7 +48,6 @@ pyOpenSSL==21.0.0
 pyparsing==2.4.7
 pyrsistent==0.18.1
 pyserial==3.5
-python-apt==2.4.0+ubuntu4
 python-dotenv==1.1.1
 pytz==2022.1
 PyYAML==5.4.1
