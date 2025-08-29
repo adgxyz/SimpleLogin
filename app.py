@@ -50,7 +50,7 @@ def login():
     if not bcrypt.check_password_hash(user['password_hash'], data['password']):
         return jsonify({'message': 'Invalid credentials'}), 401
 
-    token = create_access_token(identity={'id': user['id'], 'role': user['role']})
+    token = create_access_token(identity={'id': str(user['id']), 'role': user['role']})
     return jsonify({
         'message': 'Login successful',
         'access_token': token,
