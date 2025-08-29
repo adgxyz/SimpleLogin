@@ -11,6 +11,7 @@ load_dotenv()
 
 app = Flask(__name__)
 app.config['JWT_SECRET_KEY'] = os.getenv("APP_SECRET")
+app.config['JWT_SUBJECT_CLAIM'] = 'sub'
 bcrypt = Bcrypt(app)
 jwt = JWTManager(app)
 
